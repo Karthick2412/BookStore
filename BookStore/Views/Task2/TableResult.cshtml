@@ -1,0 +1,31 @@
+﻿@model List<TableCreateres>
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th></th>
+            @for (var i = 1; i <=Model.Count; i++)
+            {
+                <th>@i</th>
+                
+            }
+            <th>Sum</th>
+        <th>Average</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var eachRow in Model)
+    {
+        <tr>
+                <td>@eachRow.Rows[0]</td>
+                @foreach (var eachColumn in @eachRow.Rows)
+                {
+                    <td>@eachColumn</td>
+                }
+            <td>@eachRow.Sum</td>
+               
+            <td>@eachRow.Average</td>
+        </tr>
+    }
+    </tbody>
+</table>

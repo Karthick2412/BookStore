@@ -1,0 +1,30 @@
+﻿@model Book
+
+<form method="post">
+    <div class="border p-3 mt-5">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Book</h2>
+            <hr />
+        </div>
+        <div class="mb-4 p-1">
+            <label asp-for="BookName" class="mb-2 p-0"></label>
+            <input asp-for="BookName" class="form-control" />
+        </div>
+        <div class="mb-4 p-1">
+            <label asp-for="AuthorName" class="mb-2 p-0"></label>
+            <input asp-for="AuthorName" class="form-control" />
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Save</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Book" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</form>
